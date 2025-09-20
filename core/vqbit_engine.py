@@ -172,7 +172,7 @@ class VQbitEngine:
         
         return operator
     
-    async def _initialize_knowledge_graph(self):
+    def _initialize_knowledge_graph(self):
         """Initialize connection to knowledge graph"""
         try:
             # Test Neo4j connection
@@ -192,7 +192,7 @@ class VQbitEngine:
         except Exception as e:
             logger.warning(f"Knowledge graph initialization failed: {e}")
     
-    async def _load_optimization_patterns(self):
+    def _load_optimization_patterns(self):
         """Load optimization patterns from knowledge graph"""
         # Implementation would load learned patterns from Neo4j
         # For now, create placeholder patterns
