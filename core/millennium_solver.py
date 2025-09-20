@@ -412,7 +412,7 @@ class MillenniumSolver:
         system = self.ns_engine.ontology_engine.systems[system_id]
         
         problem_instance = MillenniumProblemInstance(
-            instance_id=f"millennium_{system_id}",
+            instance_id=system_id,  # Don't double-prefix
             initial_data=system.initial_conditions,
             domain_properties={
                 'dimension': 3,
@@ -435,11 +435,8 @@ class MillenniumSolver:
         
         logger.info(f"Starting Millennium proof with strategy: {proof_strategy.value}")
         
-        # Extract system ID from problem ID correctly
-        if problem_id.startswith("millennium_"):
-            system_id = problem_id
-        else:
-            system_id = f"millennium_{problem_id}"
+        # The problem_id should now be the correct system_id
+        system_id = problem_id
         
         # Solve the Navier-Stokes system
         target_virtues = {

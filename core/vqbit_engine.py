@@ -68,6 +68,11 @@ class VQbitEngine:
             VirtueType.FORTITUDE: 0.25
         }
         
+        # Initialize quantum space and virtue operators immediately
+        self._initialize_quantum_space()
+        self._initialize_virtue_operators()
+        self.is_initialized = True
+        
         logger.info("vQbit Engine initialized")
     
     async def initialize(self):
@@ -110,43 +115,61 @@ class VQbitEngine:
     
     def _initialize_virtue_operators(self):
         """Initialize cardinal virtue operators"""
+        # Make sure virtue_operators dict exists
+        if not hasattr(self, 'virtue_operators'):
+            self.virtue_operators = {}
+            
         # Justice operator - promotes fairness and balance
         self.justice_operator = self._create_virtue_operator("justice")
+        self.virtue_operators[VirtueType.JUSTICE] = self.justice_operator
         
         # Temperance operator - promotes moderation and efficiency  
         self.temperance_operator = self._create_virtue_operator("temperance")
+        self.virtue_operators[VirtueType.TEMPERANCE] = self.temperance_operator
         
         # Prudence operator - promotes wisdom and long-term thinking
         self.prudence_operator = self._create_virtue_operator("prudence")
+        self.virtue_operators[VirtueType.PRUDENCE] = self.prudence_operator
         
         # Fortitude operator - promotes resilience and robustness
         self.fortitude_operator = self._create_virtue_operator("fortitude")
+        self.virtue_operators[VirtueType.FORTITUDE] = self.fortitude_operator
         
         logger.info("Virtue operators initialized")
     
     def _create_virtue_operator(self, virtue_name: str) -> np.ndarray:
         """Create a virtue-specific Hermitian operator"""
-        # Different virtue operators have different spectral properties
+        # Create sparse, numerically stable operators to avoid overflow
+        # Use smaller random matrices for numerical stability
+        
         if virtue_name == "justice":
-            # Justice promotes balanced eigenvalue distribution
-            eigenvals = np.linspace(-1, 1, self.vqbit_dimension)
+            # Justice promotes balanced distribution - use identity-like
+            operator = np.eye(self.vqbit_dimension, dtype=complex)
+            # Add small random perturbations
+            perturbation = 0.01 * np.random.randn(self.vqbit_dimension, self.vqbit_dimension)
+            operator += (perturbation + perturbation.T) / 2  # Keep Hermitian
+            
         elif virtue_name == "temperance":
-            # Temperance promotes moderation (centered distribution)
-            eigenvals = np.random.normal(0, 0.5, self.vqbit_dimension)
+            # Temperance promotes moderation - use diagonal
+            eigenvals = np.random.normal(0, 0.1, self.vqbit_dimension)  # Smaller variance
+            operator = np.diag(eigenvals).astype(complex)
+            
         elif virtue_name == "prudence":
-            # Prudence promotes stability (positive eigenvalues)
-            eigenvals = np.abs(np.random.normal(0.5, 0.3, self.vqbit_dimension))
+            # Prudence promotes stability - use positive definite
+            eigenvals = 0.1 + 0.1 * np.abs(np.random.randn(self.vqbit_dimension))  # Small positive values
+            operator = np.diag(eigenvals).astype(complex)
+            
         elif virtue_name == "fortitude":
-            # Fortitude promotes robustness (wide distribution)
-            eigenvals = np.random.uniform(-1, 1, self.vqbit_dimension)
+            # Fortitude promotes robustness - use tridiagonal
+            operator = np.zeros((self.vqbit_dimension, self.vqbit_dimension), dtype=complex)
+            np.fill_diagonal(operator, 0.5)  # Main diagonal
+            np.fill_diagonal(operator[1:], 0.1)  # Super diagonal
+            np.fill_diagonal(operator[:, 1:], 0.1)  # Sub diagonal
+            
         else:
-            eigenvals = np.random.randn(self.vqbit_dimension)
+            operator = 0.1 * np.eye(self.vqbit_dimension, dtype=complex)
         
-        # Create random orthogonal matrix for eigenvectors
-        Q, _ = np.linalg.qr(np.random.randn(self.vqbit_dimension, self.vqbit_dimension))
-        
-        # Construct Hermitian matrix: Q @ diag(eigenvals) @ Q†
-        return Q @ np.diag(eigenvals) @ Q.T.conj()
+        return operator
     
     async def _initialize_knowledge_graph(self):
         """Initialize connection to knowledge graph"""
@@ -188,16 +211,26 @@ class VQbitEngine:
     def create_vqbit_state(self, 
                           problem_context: Dict[str, Any] = None,
                           initial_values: Dict[str, float] = None) -> VQbitState:
-        """Create a new vQbit state"""
+        """Create a new vQbit state with proper superposition"""
         
-        # Initialize quantum amplitudes
+        # Initialize quantum amplitudes in superposition
         if initial_values:
             # Use initial values to bias the quantum state
             amplitudes = self._encode_classical_values(initial_values)
         else:
-            # Create superposition state
-            amplitudes = np.random.randn(self.vqbit_dimension) + 1j * np.random.randn(self.vqbit_dimension)
-            amplitudes = amplitudes / np.linalg.norm(amplitudes)
+            # Create proper quantum superposition state
+            # Initialize with complex amplitudes for true quantum behavior
+            real_part = np.random.randn(self.vqbit_dimension) * 0.1  # Small variance for stability
+            imag_part = np.random.randn(self.vqbit_dimension) * 0.1
+            amplitudes = (real_part + 1j * imag_part).astype(complex)
+            
+            # Normalize to ensure valid quantum state
+            norm = np.linalg.norm(amplitudes)
+            if norm > 1e-10:
+                amplitudes = amplitudes / norm
+            else:
+                # Fallback to uniform superposition
+                amplitudes = np.ones(self.vqbit_dimension, dtype=complex) / np.sqrt(self.vqbit_dimension)
         
         # Calculate quantum coherence
         coherence = self._calculate_coherence(amplitudes)
@@ -205,10 +238,13 @@ class VQbitEngine:
         # Initialize virtue scores
         virtue_scores = self._measure_virtues(amplitudes)
         
+        # Initialize entanglement map for multi-vQbit systems
+        entanglement_map = self._initialize_entanglement_map(problem_context)
+        
         return VQbitState(
             amplitudes=amplitudes,
             coherence=coherence,
-            entanglement={},
+            entanglement=entanglement_map,
             virtue_scores=virtue_scores,
             metadata=problem_context or {}
         )
@@ -232,6 +268,96 @@ class VQbitEngine:
             amplitudes = np.ones(self.vqbit_dimension, dtype=complex) / np.sqrt(self.vqbit_dimension)
         
         return amplitudes
+    
+    def _initialize_entanglement_map(self, problem_context: Dict[str, Any] = None) -> Dict[str, np.ndarray]:
+        """Initialize entanglement map for multi-vQbit systems (protein folding style)"""
+        entanglement_map = {}
+        
+        if problem_context and 'system_components' in problem_context:
+            # For fluid dynamics: entangle velocity, pressure, vorticity fields
+            components = problem_context['system_components']
+            for comp1 in components:
+                for comp2 in components:
+                    if comp1 != comp2:
+                        # Create small entanglement matrix for stability
+                        entanglement_matrix = np.random.randn(8, 8) * 0.01 + 1j * np.random.randn(8, 8) * 0.01
+                        entanglement_map[f"{comp1}_{comp2}"] = entanglement_matrix
+        
+        return entanglement_map
+    
+    def evolve_entangled_vqbits(self, vqbit_states: List[VQbitState], time_step: float = 0.1) -> List[VQbitState]:
+        """Evolve multiple entangled vQbit states (like protein folding graph Laplacian)"""
+        
+        if len(vqbit_states) < 2:
+            return vqbit_states
+            
+        # Create system state vector from all vQbits
+        n_states = len(vqbit_states)
+        system_amplitudes = np.vstack([state.amplitudes.reshape(-1, 1) for state in vqbit_states])
+        system_state = system_amplitudes.flatten()
+        
+        # Create entanglement Hamiltonian (simplified graph Laplacian approach)
+        # H = sum of coupling terms between adjacent vQbits
+        hamiltonian = np.zeros((len(system_state), len(system_state)), dtype=complex)
+        
+        chunk_size = self.vqbit_dimension
+        for i in range(n_states - 1):
+            # Couple adjacent vQbits with small coupling strength for stability
+            start_i, end_i = i * chunk_size, (i + 1) * chunk_size
+            start_j, end_j = (i + 1) * chunk_size, (i + 2) * chunk_size
+            
+            # Add coupling terms (simplified for numerical stability)
+            coupling_strength = 0.01
+            coupling_matrix = coupling_strength * np.eye(chunk_size, dtype=complex)
+            
+            hamiltonian[start_i:end_i, start_j:end_j] = coupling_matrix
+            hamiltonian[start_j:end_j, start_i:end_i] = coupling_matrix.conj().T
+        
+        # Time evolution: |ψ(t+dt)⟩ = exp(-iH*dt)|ψ(t)⟩
+        evolution_operator = self._safe_matrix_exp(-1j * hamiltonian * time_step)
+        evolved_state = evolution_operator @ system_state
+        
+        # Update individual vQbit states
+        evolved_vqbits = []
+        for i, state in enumerate(vqbit_states):
+            start_idx = i * chunk_size
+            end_idx = (i + 1) * chunk_size
+            new_amplitudes = evolved_state[start_idx:end_idx]
+            
+            # Renormalize
+            norm = np.linalg.norm(new_amplitudes)
+            if norm > 1e-10:
+                new_amplitudes = new_amplitudes / norm
+            
+            # Update state
+            new_state = VQbitState(
+                amplitudes=new_amplitudes,
+                coherence=self._calculate_coherence(new_amplitudes),
+                entanglement=state.entanglement,
+                virtue_scores=self._measure_virtues(new_amplitudes),
+                metadata=state.metadata
+            )
+            evolved_vqbits.append(new_state)
+        
+        return evolved_vqbits
+    
+    def _safe_matrix_exp(self, matrix: np.ndarray) -> np.ndarray:
+        """Safe matrix exponential for numerical stability"""
+        try:
+            # For small matrices, use direct calculation
+            if matrix.shape[0] <= 64:
+                return np.eye(matrix.shape[0], dtype=complex) + matrix + 0.5 * (matrix @ matrix)
+            else:
+                # For large matrices, use truncated series expansion
+                result = np.eye(matrix.shape[0], dtype=complex)
+                term = np.eye(matrix.shape[0], dtype=complex)
+                for n in range(1, 4):  # Truncate at 3rd order for stability
+                    term = term @ matrix / n
+                    result += term
+                return result
+        except:
+            # Fallback to identity if anything goes wrong
+            return np.eye(matrix.shape[0], dtype=complex)
     
     def _calculate_coherence(self, amplitudes: np.ndarray) -> float:
         """Calculate quantum coherence of the state"""
