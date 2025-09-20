@@ -446,6 +446,7 @@ class MillenniumSolver:
             VirtueType.FORTITUDE: 0.2     # Robustness
         }
         
+        # SYNC CALL - NO AWAIT (Cloud compatible)
         solution_sequence = self.ns_engine.solve_millennium_problem(
             system_id=system_id,
             max_time=1.0,
