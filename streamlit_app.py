@@ -210,22 +210,24 @@ except ImportError as e:
                 'timestamp': datetime.now().isoformat()
             }
     
-    # Try cloud-safe fallback
-    try:
-        from cloud_safe_vqbit import CloudSafeVQbitEngine, CloudSafeNavierStokesEngine, CloudSafeMillenniumSolver
-        VQbitEngine = CloudSafeVQbitEngine
-        NavierStokesEngine = CloudSafeNavierStokesEngine  
-        MillenniumSolver = CloudSafeMillenniumSolver
-        VQBIT_AVAILABLE = True
-        logger.info("✅ Using cloud-safe vQbit implementation")
-        if not IS_CLOUD_ENV:
+    # Force cloud-safe fallback for Streamlit Cloud
+    if IS_CLOUD_ENV:
+        logger.info("🌥️ Cloud environment detected - using lightweight engines")
+        VQBIT_AVAILABLE = False  # Force fallback mode for cloud
+    else:
+        # Try cloud-safe fallback for local testing
+        try:
+            from cloud_safe_vqbit import CloudSafeVQbitEngine, CloudSafeNavierStokesEngine, CloudSafeMillenniumSolver
+            VQbitEngine = CloudSafeVQbitEngine
+            NavierStokesEngine = CloudSafeNavierStokesEngine  
+            MillenniumSolver = CloudSafeMillenniumSolver
+            VQBIT_AVAILABLE = True
+            logger.info("✅ Using cloud-safe vQbit implementation")
             st.info("🔄 Running in cloud compatibility mode with lightweight vQbit")
-    except Exception as e2:
-        logger.error(f"Even cloud-safe fallback failed: {e2}")
-        # Only show warning if not in production cloud environment
-        if not IS_CLOUD_ENV:
+        except Exception as e2:
+            logger.error(f"Cloud-safe fallback failed: {e2}")
             st.info("🔄 Running in basic compatibility mode")
-        VQBIT_AVAILABLE = False
+            VQBIT_AVAILABLE = False
 
 # Configure page
 st.set_page_config(
