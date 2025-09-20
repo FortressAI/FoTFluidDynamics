@@ -13,7 +13,7 @@ import networkx as nx
 from datetime import datetime
 import json
 import os
-import asyncio
+# import asyncio  # Disabled for cloud compatibility
 import logging
 from pathlib import Path
 from typing import Dict, List, Any, Optional
@@ -266,21 +266,10 @@ def initialize_engines():
         st.error(f"Engine initialization failed: {e}")
         return None, None, None
 
-async def async_initialize_engines():
-    """Async initialization of engines"""
-    vqbit_engine, ns_engine, millennium_solver = initialize_engines()
-    
-    if vqbit_engine and ns_engine and millennium_solver:
-        await vqbit_engine.initialize()
-        await ns_engine.initialize()
-        await millennium_solver.initialize()
-        
-        st.session_state.vqbit_engine = vqbit_engine
-        st.session_state.ns_engine = ns_engine
-        st.session_state.millennium_solver = millennium_solver
-        
-        return True
-    return False
+# Async initialization removed for cloud compatibility
+# def async_initialize_engines():
+#     """Async initialization of engines"""
+#     pass
 
 # Custom CSS
 st.markdown("""
@@ -1878,7 +1867,7 @@ def show_navier_stokes_solver():
         with st.spinner("🧮 Solving with vQbit framework..."):
             try:
                 # REAL IMPLEMENTATION - NO SIMULATIONS
-                import asyncio
+                # import asyncio  # Disabled for cloud compatibility
                 
                 status_text.text("Initializing vQbit states...")
                 progress_bar.progress(0.1)
@@ -1892,9 +1881,9 @@ def show_navier_stokes_solver():
                 status_text.text("Applying Navier-Stokes operator...")
                 progress_bar.progress(0.3)
                 
-                # Real Navier-Stokes solution
-                async def solve_real():
-                    return await millennium_solver.solve_millennium_problem(
+                # Real Navier-Stokes solution (sync for cloud compatibility)
+                def solve_real():
+                    return millennium_solver.solve_millennium_problem(
                         problem_id=problem_id,
                         proof_strategy=ProofStrategy.VIRTUE_GUIDED if VQBIT_AVAILABLE else "virtue_guided",
                         target_confidence=0.95
@@ -1908,7 +1897,7 @@ def show_navier_stokes_solver():
                 
                 # Execute REAL solver - NO SIMULATION
                 try:
-                    millennium_proof = asyncio.run(solve_real())
+                    millennium_proof = solve_real()
                     progress_bar.progress(1.0)
                     status_text.text("✅ REAL solution completed!")
                     
