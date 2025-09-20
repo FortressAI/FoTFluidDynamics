@@ -446,7 +446,7 @@ class MillenniumSolver:
             VirtueType.FORTITUDE: 0.2     # Robustness
         }
         
-        solution_sequence = await self.ns_engine.solve_millennium_problem(
+        solution_sequence = self.ns_engine.solve_millennium_problem(
             system_id=system_id,
             max_time=1.0,
             target_virtues=target_virtues
