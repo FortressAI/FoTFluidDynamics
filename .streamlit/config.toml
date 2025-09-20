@@ -11,14 +11,10 @@ enableCORS = false
 enableXsrfProtection = false
 maxUploadSize = 200
 baseUrlPath = ""
-enableStaticServing = true
+enableStaticServing = false
 
 [browser]
 gatherUsageStats = false
-showErrorDetails = true
-
-[client]
-caching = true
 
 [global]
 developmentMode = false
