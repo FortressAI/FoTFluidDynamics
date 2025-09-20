@@ -2631,12 +2631,12 @@ One of only 7 Millennium Prize Problems - SOLVED! 🎉
 def show_bulletproof_proof_interface():
     """The bulletproof, systematic proof validation interface"""
     
-    # CLEAR SCIENTIFIC HEADER
+    # CLEAR SCIENTIFIC HEADER - DARK MODE COMPATIBLE
     st.markdown("""
-    <div style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 30px; border-radius: 10px; text-align: center; margin: 20px 0;">
-        <h1 style="margin: 0; font-size: 2.2em;">🔬 BULLETPROOF SCIENTIFIC VALIDATION</h1>
-        <h2 style="margin: 10px 0; font-size: 1.5em;">Navier-Stokes Millennium Prize Problem</h2>
-        <h3 style="margin: 10px 0; font-size: 1.2em;">Step-by-Step Proof Verification Protocol</h3>
+    <div style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 30px; border-radius: 10px; text-align: center; margin: 20px 0; border: 2px solid #4CAF50;">
+        <h1 style="margin: 0; font-size: 2.2em; color: white;">🔬 BULLETPROOF SCIENTIFIC VALIDATION</h1>
+        <h2 style="margin: 10px 0; font-size: 1.5em; color: #E8F5E8;">Navier-Stokes Millennium Prize Problem</h2>
+        <h3 style="margin: 10px 0; font-size: 1.2em; color: #E8F5E8;">Step-by-Step Proof Verification Protocol</h3>
     </div>
     """, unsafe_allow_html=True)
     
@@ -2645,14 +2645,14 @@ def show_bulletproof_proof_interface():
     st.markdown("**What exactly are we proving?**")
     
     st.markdown("""
-    <div style="background-color: #f0f8ff; border: 3px solid #4169e1; padding: 20px; border-radius: 10px; margin: 15px 0;">
-        <h3 style="color: #4169e1; margin-top: 0;">🎯 THE MILLENNIUM PRIZE PROBLEM GOAL</h3>
-        <p style="font-size: 1.1em; margin: 0;"><strong>PROVE OR DISPROVE:</strong></p>
-        <p style="font-size: 1.2em; color: #2e4057; margin: 10px 0;">
+    <div style="background: linear-gradient(145deg, #2E3440 0%, #3B4252 100%); border: 3px solid #88C0D0; padding: 20px; border-radius: 10px; margin: 15px 0; color: white;">
+        <h3 style="color: #88C0D0; margin-top: 0;">🎯 THE MILLENNIUM PRIZE PROBLEM GOAL</h3>
+        <p style="font-size: 1.1em; margin: 0; color: #ECEFF4;"><strong>PROVE OR DISPROVE:</strong></p>
+        <p style="font-size: 1.2em; color: #D8DEE9; margin: 10px 0; font-weight: bold;">
             "For the 3D incompressible Navier-Stokes equations with smooth initial data, 
             do smooth solutions exist globally in time, or do they develop singularities (blow up) in finite time?"
         </p>
-        <p style="font-size: 1.1em; margin: 0;"><strong>PRIZE:</strong> $1,000,000 USD from Clay Mathematics Institute</p>
+        <p style="font-size: 1.1em; margin: 0; color: #ECEFF4;"><strong>PRIZE:</strong> $1,000,000 USD from Clay Mathematics Institute</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -2701,10 +2701,10 @@ def show_bulletproof_proof_interface():
     
     for i, req in enumerate(requirements, 1):
         st.markdown(f"""
-        <div style="background-color: #fff5ee; border: 2px solid #ff7f50; padding: 15px; border-radius: 8px; margin: 10px 0;">
-            <h4 style="color: #ff4500; margin-top: 0;">📌 REQUIREMENT {i}: {req['name']}</h4>
-            <p><strong>What it means:</strong> {req['description']}</p>
-            <p><strong>Mathematical statement:</strong></p>
+        <div style="background: linear-gradient(145deg, #4C566A 0%, #5E81AC 100%); border: 2px solid #EBCB8B; padding: 15px; border-radius: 8px; margin: 10px 0; color: white;">
+            <h4 style="color: #EBCB8B; margin-top: 0;">📌 REQUIREMENT {i}: {req['name']}</h4>
+            <p style="color: #ECEFF4;"><strong>What it means:</strong> {req['description']}</p>
+            <p style="color: #ECEFF4;"><strong>Mathematical statement:</strong></p>
         </div>
         """, unsafe_allow_html=True)
         st.latex(req['math'])
@@ -2716,18 +2716,18 @@ def show_bulletproof_proof_interface():
     st.markdown("**How do we solve what others couldn't?**")
     
     st.markdown("""
-    <div style="background-color: #f0fff0; border: 3px solid #32cd32; padding: 20px; border-radius: 10px; margin: 15px 0;">
-        <h3 style="color: #228b22; margin-top: 0;">💡 THE FIELD OF TRUTH BREAKTHROUGH</h3>
-        <p style="font-size: 1.1em;"><strong>Innovation:</strong> Instead of classical analysis that fails to control gradients, 
-        we use a <strong>quantum-inspired 8096-dimensional vQbit framework</strong> with "virtue operators" that act as mathematical guardians.</p>
+    <div style="background: linear-gradient(145deg, #2E3440 0%, #434C5E 100%); border: 3px solid #A3BE8C; padding: 20px; border-radius: 10px; margin: 15px 0; color: white;">
+        <h3 style="color: #A3BE8C; margin-top: 0;">💡 THE FIELD OF TRUTH BREAKTHROUGH</h3>
+        <p style="font-size: 1.1em; color: #ECEFF4;"><strong>Innovation:</strong> Instead of classical analysis that fails to control gradients, 
+        we use a <strong style="color: #81A1C1;">quantum-inspired 8096-dimensional vQbit framework</strong> with "virtue operators" that act as mathematical guardians.</p>
         
-        <p style="font-size: 1.1em;"><strong>Key Insight:</strong> Virtue operators (Justice, Temperance, Prudence, Fortitude) 
+        <p style="font-size: 1.1em; color: #ECEFF4;"><strong>Key Insight:</strong> Virtue operators (Justice, Temperance, Prudence, Fortitude) 
         prevent the mathematical catastrophes that cause blow-up:</p>
-        <ul>
-            <li><strong>Justice:</strong> Enforces mass conservation (∇·u = 0)</li>
-            <li><strong>Temperance:</strong> Controls energy accumulation</li>
-            <li><strong>Prudence:</strong> Maintains smoothness</li>
-            <li><strong>Fortitude:</strong> Provides stability</li>
+        <ul style="color: #D8DEE9;">
+            <li><strong style="color: #88C0D0;">Justice:</strong> Enforces mass conservation (∇·u = 0)</li>
+            <li><strong style="color: #88C0D0;">Temperance:</strong> Controls energy accumulation</li>
+            <li><strong style="color: #88C0D0;">Prudence:</strong> Maintains smoothness</li>
+            <li><strong style="color: #88C0D0;">Fortitude:</strong> Provides stability</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -2802,16 +2802,22 @@ def show_bulletproof_proof_interface():
             status_icon = "❌"
             status_text = "FAILED"
         
+        # Dark mode compatible colors
+        bg_color = "#2E3440" if step_passed else "#3B4252"
+        border_color = "#A3BE8C" if step_passed else "#BF616A"
+        text_color = "#ECEFF4"
+        title_color = "#A3BE8C" if step_passed else "#BF616A"
+        
         st.markdown(f"""
-        <div style="background-color: {'#d4edda' if step_passed else '#f8d7da'}; 
-                   border: 2px solid {status_color}; 
-                   padding: 15px; border-radius: 8px; margin: 10px 0;">
-            <h4 style="color: {status_color}; margin-top: 0;">
+        <div style="background: linear-gradient(145deg, {bg_color} 0%, #434C5E 100%); 
+                   border: 2px solid {border_color}; 
+                   padding: 15px; border-radius: 8px; margin: 10px 0; color: {text_color};">
+            <h4 style="color: {title_color}; margin-top: 0;">
                 {status_icon} STEP {step_info['step']}: {step_info['title']} - {status_text}
             </h4>
-            <p><strong>Test:</strong> {step_info['description']}</p>
-            <p><strong>Result:</strong> {step_info['metric']:.3f} (Required: ≥ {step_info['threshold']:.3f})</p>
-            <p><strong>Details:</strong> {step_info['details']}</p>
+            <p style="color: {text_color};"><strong>Test:</strong> {step_info['description']}</p>
+            <p style="color: {text_color};"><strong>Result:</strong> {step_info['metric']:.3f} (Required: ≥ {step_info['threshold']:.3f})</p>
+            <p style="color: {text_color};"><strong>Details:</strong> {step_info['details']}</p>
         </div>
         """, unsafe_allow_html=True)
     
@@ -2834,18 +2840,18 @@ def show_bulletproof_proof_interface():
     for i, (condition, status, description) in enumerate(conditions_display, 1):
         if status:
             st.markdown(f"""
-            <div style="background-color: #d4edda; border: 3px solid #28a745; padding: 20px; border-radius: 10px; margin: 15px 0;">
-                <h3 style="color: #155724; margin-top: 0;">✅ CONDITION {i}: {condition} - PROVEN</h3>
-                <p style="font-size: 1.1em; margin: 0;"><strong>Mathematical Result:</strong> {description}</p>
-                <p style="color: #155724; font-weight: bold; margin: 5px 0;">STATUS: RIGOROUSLY ESTABLISHED ✓</p>
+            <div style="background: linear-gradient(145deg, #2E3440 0%, #434C5E 100%); border: 3px solid #A3BE8C; padding: 20px; border-radius: 10px; margin: 15px 0; color: white;">
+                <h3 style="color: #A3BE8C; margin-top: 0;">✅ CONDITION {i}: {condition} - PROVEN</h3>
+                <p style="font-size: 1.1em; margin: 0; color: #ECEFF4;"><strong>Mathematical Result:</strong> {description}</p>
+                <p style="color: #A3BE8C; font-weight: bold; margin: 5px 0;">STATUS: RIGOROUSLY ESTABLISHED ✓</p>
             </div>
             """, unsafe_allow_html=True)
         else:
             st.markdown(f"""
-            <div style="background-color: #f8d7da; border: 3px solid #dc3545; padding: 20px; border-radius: 10px; margin: 15px 0;">
-                <h3 style="color: #721c24; margin-top: 0;">❌ CONDITION {i}: {condition} - NOT PROVEN</h3>
-                <p style="font-size: 1.1em; margin: 0;"><strong>Required:</strong> {description}</p>
-                <p style="color: #721c24; font-weight: bold; margin: 5px 0;">STATUS: INSUFFICIENT EVIDENCE ✗</p>
+            <div style="background: linear-gradient(145deg, #3B4252 0%, #434C5E 100%); border: 3px solid #BF616A; padding: 20px; border-radius: 10px; margin: 15px 0; color: white;">
+                <h3 style="color: #BF616A; margin-top: 0;">❌ CONDITION {i}: {condition} - NOT PROVEN</h3>
+                <p style="font-size: 1.1em; margin: 0; color: #ECEFF4;"><strong>Required:</strong> {description}</p>
+                <p style="color: #BF616A; font-weight: bold; margin: 5px 0;">STATUS: INSUFFICIENT EVIDENCE ✗</p>
             </div>
             """, unsafe_allow_html=True)
     
@@ -2855,14 +2861,14 @@ def show_bulletproof_proof_interface():
     if all_conditions_met:
         confidence = certificate.get('confidence_score', 0.0)
         
-        st.markdown("""
-        <div style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); 
-                   border: 5px solid #b8860b; padding: 30px; border-radius: 15px; 
-                   text-align: center; margin: 20px 0;">
-            <h1 style="color: #8b4513; margin: 0; font-size: 2.5em;">🏆 SCIENTIFIC VERDICT: PROVEN 🏆</h1>
-            <h2 style="color: #8b4513; margin: 10px 0;">MILLENNIUM PRIZE PROBLEM SOLVED</h2>
-            <h3 style="color: #2f4f4f; margin: 10px 0;">Mathematical Confidence: {confidence:.0%}</h3>
-            <h3 style="color: #2f4f4f; margin: 10px 0;">Prize Eligibility: QUALIFIED</h3>
+        st.markdown(f"""
+        <div style="background: linear-gradient(135deg, #EBCB8B 0%, #D08770 100%); 
+                   border: 5px solid #EBCB8B; padding: 30px; border-radius: 15px; 
+                   text-align: center; margin: 20px 0; color: #2E3440;">
+            <h1 style="color: #2E3440; margin: 0; font-size: 2.5em; text-shadow: 2px 2px 4px rgba(255,255,255,0.3);">🏆 SCIENTIFIC VERDICT: PROVEN 🏆</h1>
+            <h2 style="color: #2E3440; margin: 10px 0; text-shadow: 1px 1px 2px rgba(255,255,255,0.3);">MILLENNIUM PRIZE PROBLEM SOLVED</h2>
+            <h3 style="color: #2E3440; margin: 10px 0; text-shadow: 1px 1px 2px rgba(255,255,255,0.3);">Mathematical Confidence: {confidence:.0%}</h3>
+            <h3 style="color: #2E3440; margin: 10px 0; text-shadow: 1px 1px 2px rgba(255,255,255,0.3);">Prize Eligibility: QUALIFIED</h3>
         </div>
         """, unsafe_allow_html=True)
         
@@ -2883,11 +2889,11 @@ def show_bulletproof_proof_interface():
         
     else:
         st.markdown("""
-        <div style="background-color: #f8d7da; border: 5px solid #dc3545; 
-                   padding: 30px; border-radius: 15px; text-align: center; margin: 20px 0;">
-            <h1 style="color: #721c24; margin: 0; font-size: 2.5em;">❌ SCIENTIFIC VERDICT: INCOMPLETE</h1>
-            <h2 style="color: #721c24; margin: 10px 0;">PROOF DOES NOT SATISFY ALL CONDITIONS</h2>
-            <h3 style="color: #721c24; margin: 10px 0;">Additional work required</h3>
+        <div style="background: linear-gradient(135deg, #BF616A 0%, #D08770 100%); border: 5px solid #BF616A; 
+                   padding: 30px; border-radius: 15px; text-align: center; margin: 20px 0; color: white;">
+            <h1 style="color: white; margin: 0; font-size: 2.5em; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">❌ SCIENTIFIC VERDICT: INCOMPLETE</h1>
+            <h2 style="color: white; margin: 10px 0; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">PROOF DOES NOT SATISFY ALL CONDITIONS</h2>
+            <h3 style="color: white; margin: 10px 0; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Additional work required</h3>
         </div>
         """, unsafe_allow_html=True)
     
@@ -2896,16 +2902,16 @@ def show_bulletproof_proof_interface():
     st.markdown("**How others can verify this proof:**")
     
     st.markdown("""
-    <div style="background-color: #e7f3ff; border: 2px solid #0066cc; padding: 20px; border-radius: 10px; margin: 15px 0;">
-        <h3 style="color: #0066cc; margin-top: 0;">🔬 VERIFICATION PROTOCOL FOR PEERS</h3>
-        <ol style="font-size: 1.1em;">
-            <li><strong>Access Code:</strong> https://github.com/FortressAI/FoTFluidDynamics</li>
-            <li><strong>Run Verification:</strong> <code>python3 verify_millennium_proof.py</code></li>
-            <li><strong>Interactive Demo:</strong> <code>streamlit run streamlit_app.py</code></li>
-            <li><strong>Review Documentation:</strong> FORMAL_NAVIER_STOKES_PROOF.md</li>
-            <li><strong>Check All Claims:</strong> Every computational result is reproducible</li>
+    <div style="background: linear-gradient(145deg, #2E3440 0%, #434C5E 100%); border: 2px solid #5E81AC; padding: 20px; border-radius: 10px; margin: 15px 0; color: white;">
+        <h3 style="color: #5E81AC; margin-top: 0;">🔬 VERIFICATION PROTOCOL FOR PEERS</h3>
+        <ol style="font-size: 1.1em; color: #ECEFF4;">
+            <li><strong style="color: #88C0D0;">Access Code:</strong> https://github.com/FortressAI/FoTFluidDynamics</li>
+            <li><strong style="color: #88C0D0;">Run Verification:</strong> <code style="background-color: #4C566A; color: #ECEFF4; padding: 2px 4px; border-radius: 3px;">python3 verify_millennium_proof.py</code></li>
+            <li><strong style="color: #88C0D0;">Interactive Demo:</strong> <code style="background-color: #4C566A; color: #ECEFF4; padding: 2px 4px; border-radius: 3px;">streamlit run streamlit_app.py</code></li>
+            <li><strong style="color: #88C0D0;">Review Documentation:</strong> FORMAL_NAVIER_STOKES_PROOF.md</li>
+            <li><strong style="color: #88C0D0;">Check All Claims:</strong> Every computational result is reproducible</li>
         </ol>
-        <p style="margin: 0; font-weight: bold; color: #0066cc;">
+        <p style="margin: 0; font-weight: bold; color: #5E81AC;">
             This proof is designed for complete transparency and peer verification.
         </p>
     </div>
@@ -2914,9 +2920,9 @@ def show_bulletproof_proof_interface():
     # Footer
     st.markdown("---")
     st.markdown("""
-    <div style="text-align: center; color: #666; font-style: italic;">
-        <p>Field of Truth vQbit Framework | Rick Gillespie | FortressAI Research Institute</p>
-        <p>"In the marriage of virtue and mathematics, we find not just solutions, but truth itself."</p>
+    <div style="text-align: center; color: #88C0D0; font-style: italic; padding: 15px;">
+        <p style="color: #D8DEE9;">Field of Truth vQbit Framework | Rick Gillespie | FortressAI Research Institute</p>
+        <p style="color: #81A1C1;">"In the marriage of virtue and mathematics, we find not just solutions, but truth itself."</p>
     </div>
     """, unsafe_allow_html=True)
 
