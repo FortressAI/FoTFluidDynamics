@@ -10,6 +10,8 @@ port = 8501
 enableCORS = false
 enableXsrfProtection = false
 maxUploadSize = 200
+baseUrlPath = ""
+enableStaticServing = true
 
 [browser]
 gatherUsageStats = false
@@ -20,3 +22,4 @@ caching = true
 
 [global]
 developmentMode = false
+# Removed dataFrameSerialization option as it's deprecated

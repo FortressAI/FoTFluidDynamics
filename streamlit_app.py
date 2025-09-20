@@ -2930,4 +2930,10 @@ def show_bulletproof_proof_interface():
     """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        st.error(f"Application Error: {e}")
+        logger.error(f"Critical application error: {e}")
+        # Ensure the app can still respond to health checks
+        st.write("App is running but encountered an error. Please refresh the page.")
