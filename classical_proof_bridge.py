@@ -84,7 +84,7 @@ def show_classical_proof_structure():
         }
     ])
     
-    st.dataframe(proof_outline, use_container_width=True, hide_index=True)
+    st.dataframe(proof_outline, width='stretch', hide_index=True)
     
     # CLASSICAL LITERATURE CONTEXT
     st.markdown("""
@@ -146,7 +146,7 @@ def show_classical_proof_structure():
         }
     ])
     
-    st.dataframe(translation_table, use_container_width=True, hide_index=True)
+    st.dataframe(translation_table, width='stretch', hide_index=True)
     
     # VERIFICATION AGAINST CLAY INSTITUTE CRITERIA
     st.markdown("""
@@ -182,7 +182,7 @@ def show_classical_proof_structure():
         }
     ])
     
-    st.dataframe(criteria_check, use_container_width=True, hide_index=True)
+    st.dataframe(criteria_check, width='stretch', hide_index=True)
     
     # PEER REVIEW READINESS
     st.markdown("""
@@ -256,7 +256,7 @@ def show_mathematical_rigor_evidence():
         }
     ])
     
-    st.dataframe(rigor_evidence, use_container_width=True, hide_index=True)
+    st.dataframe(rigor_evidence, width='stretch', hide_index=True)
 
 # Integration function to add to main Streamlit app
 def show_classical_bridge_page():

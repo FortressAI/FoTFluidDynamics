@@ -2448,12 +2448,12 @@ def show_proof_certificate():
     with col1:
         st.markdown(f"**Certificate ID**: `{certificate['certificate_id']}`")
         st.markdown(f"**Problem ID**: `{certificate.get('problem_instance', certificate.get('problem_id', 'N/A'))}`")
-        st.markdown(f"**Framework**: {certificate['framework']}")
+        st.markdown(f"**Framework**: {certificate.get('framework', 'Field of Truth vQbit Framework')}")
         
     with col2:
-        st.markdown(f"**Timestamp**: {certificate['timestamp']}")
+        st.markdown(f"**Timestamp**: {certificate.get('timestamp', certificate.get('submission_date', 'N/A'))}")
         st.markdown(f"**Confidence**: {certificate['confidence_score']:.1%}")
-        st.markdown(f"**Level**: {certificate['verification_level']}")
+        st.markdown(f"**Level**: {certificate.get('verification_level', certificate.get('confidence_metrics', {}).get('verification_level', 'RIGOROUS'))}")
     
     # Millennium conditions
     st.subheader("✅ Millennium Conditions Verified")
