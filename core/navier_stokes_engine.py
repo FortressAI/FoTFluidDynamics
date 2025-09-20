@@ -8,7 +8,7 @@ from typing import Dict, List, Any, Optional, Tuple, Callable
 from dataclasses import dataclass, field
 import logging
 from datetime import datetime
-import asyncio
+# import asyncio  # Disabled for Streamlit Cloud compatibility
 from concurrent.futures import ThreadPoolExecutor
 import warnings
 
@@ -369,11 +369,11 @@ class NavierStokesEngine:
         self.is_initialized = False
         self.solution_archive = {}
         
-    async def initialize(self):
+    def initialize(self):
         """Initialize the Navier-Stokes engine"""
         try:
             if not self.vqbit_engine.is_ready():
-                await self.vqbit_engine.initialize()
+                self.vqbit_engine.initialize()  # Changed to sync for cloud
             
             self.is_initialized = True
             logger.info("✅ Navier-Stokes engine initialized")
@@ -395,7 +395,7 @@ class NavierStokesEngine:
         system_id = f"millennium_re{reynolds_number}_L{domain_size}"
         return system_id
     
-    async def solve_millennium_problem(self,
+    def solve_millennium_problem(self,
                                      system_id: str,
                                      max_time: float = 1.0,
                                      target_virtues: Optional[Dict[VirtueType, float]] = None) -> List[NavierStokesSolution]:

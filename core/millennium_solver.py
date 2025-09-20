@@ -8,7 +8,7 @@ from typing import Dict, List, Any, Optional, Tuple, Callable
 from dataclasses import dataclass, field
 import logging
 from datetime import datetime
-import asyncio
+# import asyncio  # Disabled for Streamlit Cloud compatibility
 from enum import Enum
 import json
 
@@ -384,11 +384,11 @@ class MillenniumSolver:
         self.proof_archive = {}
         self.is_initialized = False
         
-    async def initialize(self):
+    def initialize(self):
         """Initialize the Millennium solver"""
         try:
             if not self.ns_engine.is_initialized:
-                await self.ns_engine.initialize()
+                self.ns_engine.initialize()  # Changed to sync for cloud
                 
             self.is_initialized = True
             logger.info("✅ Millennium solver initialized")
@@ -427,7 +427,7 @@ class MillenniumSolver:
         
         return problem_instance.instance_id
     
-    async def solve_millennium_problem(self,
+    def solve_millennium_problem(self,
                                      problem_id: str,
                                      proof_strategy: ProofStrategy = ProofStrategy.VIRTUE_GUIDED,
                                      target_confidence: float = 0.95) -> MillenniumProof:

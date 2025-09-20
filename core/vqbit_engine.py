@@ -75,7 +75,7 @@ class VQbitEngine:
         
         logger.info("vQbit Engine initialized")
     
-    async def initialize(self):
+    def initialize(self):
         """Initialize the vQbit engine"""
         try:
             # Initialize quantum state space
@@ -86,7 +86,8 @@ class VQbitEngine:
             
             # Connect to knowledge graph if available
             if self.neo4j_client:
-                await self._initialize_knowledge_graph()
+                # await self._initialize_knowledge_graph()  # Disabled for cloud
+                pass
             
             self.is_initialized = True
             logger.info("✅ vQbit engine initialization complete")
