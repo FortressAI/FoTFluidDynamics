@@ -25,9 +25,9 @@ pymoo>=0.6.0
 # lean-theorem-prover  # If available for formal verification
 # coq-python  # If available for proof assistant integration
 
-# Database & Storage (optional)
-neo4j>=5.14.0
-redis>=5.0.0
+# Database & Storage (optional - disabled for Streamlit Cloud)
+# neo4j>=5.14.0  # Disabled for cloud deployment
+# redis>=5.0.0   # Disabled for cloud deployment
 
 # Utilities
 python-dotenv>=1.0.0

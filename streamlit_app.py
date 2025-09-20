@@ -29,11 +29,14 @@ except ImportError:
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Persistence configuration
+# Persistence configuration - Streamlit Cloud compatible
 PROOF_STORAGE_DIR = Path("data/millennium_proofs")
 PROOF_STORAGE_DIR.mkdir(parents=True, exist_ok=True)
 PROOF_STORAGE_FILE = PROOF_STORAGE_DIR / "millennium_proofs.json"
 SOLUTION_STORAGE_FILE = PROOF_STORAGE_DIR / "solution_sequences.json"
+
+# Ensure data directory exists in cloud environment
+os.makedirs(PROOF_STORAGE_DIR, exist_ok=True)
 
 def save_proofs_to_disk():
     """Save millennium proofs to persistent storage"""
