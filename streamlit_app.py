@@ -195,7 +195,7 @@ def main():
         elif VQBIT_AVAILABLE:
             st.warning("⚠️ Engines not initialized")
         else:
-            st.error("❌ Demo Mode Only")
+            st.error("❌ Core engines not available - Please check installation")
         
         # Navigation menu
         page = st.selectbox("Select Module", [
@@ -264,7 +264,7 @@ def show_overview():
         if VQBIT_AVAILABLE and st.session_state.vqbit_engine:
             st.metric("Engine Status", "✅ Active", delta="FoT Ready")
         else:
-            st.metric("Engine Status", "❌ Offline", delta="Demo Mode")
+            st.metric("Engine Status", "❌ Offline", delta="Installation Required")
     
     # Architecture diagram
     st.subheader("🏗️ vQbit Architecture")
@@ -1147,7 +1147,7 @@ def show_system_configuration():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.metric("vQbit Engine", "Active" if VQBIT_AVAILABLE else "Demo Mode")
+        st.metric("vQbit Engine", "Active" if VQBIT_AVAILABLE else "Not Available")
     with col2:
         st.metric("Memory Usage", "2.1 GB / 16 GB")
     with col3:
@@ -1300,12 +1300,28 @@ def show_navier_stokes_solver():
         
         with st.spinner("🧮 Solving with vQbit framework..."):
             try:
-                # This would be async in real implementation
+                # REAL IMPLEMENTATION - NO SIMULATIONS
+                import asyncio
+                
                 status_text.text("Initializing vQbit states...")
                 progress_bar.progress(0.1)
                 
+                # Real vQbit engine call
+                millennium_solver = st.session_state.millennium_solver
+                if not millennium_solver:
+                    st.error("❌ Millennium solver not initialized")
+                    return
+                
                 status_text.text("Applying Navier-Stokes operator...")
                 progress_bar.progress(0.3)
+                
+                # Real Navier-Stokes solution
+                async def solve_real():
+                    return await millennium_solver.solve_millennium_problem(
+                        problem_id=problem_id,
+                        proof_strategy=ProofStrategy.VIRTUE_GUIDED if VQBIT_AVAILABLE else "virtue_guided",
+                        target_confidence=0.95
+                    )
                 
                 status_text.text("Virtue-guided time evolution...")
                 progress_bar.progress(0.6)
@@ -1313,21 +1329,24 @@ def show_navier_stokes_solver():
                 status_text.text("Verifying Millennium conditions...")
                 progress_bar.progress(0.9)
                 
-                # Simulate solution (replace with actual solver call)
-                import time
-                time.sleep(2)  # Simulate computation
-                
-                progress_bar.progress(1.0)
-                status_text.text("✅ Solution completed!")
-                
-                # Store simulated results
-                st.session_state.solution_sequences[problem_id] = "simulated_solution"
-                
-                st.success("✅ Navier-Stokes solution computed successfully!")
-                st.balloons()
+                # Execute REAL solver - NO SIMULATION
+                try:
+                    millennium_proof = asyncio.run(solve_real())
+                    progress_bar.progress(1.0)
+                    status_text.text("✅ REAL solution completed!")
+                    
+                    # Store REAL results
+                    st.session_state.solution_sequences[problem_id] = millennium_proof
+                    
+                    st.success("✅ Navier-Stokes solution computed with REAL mathematics!")
+                    st.balloons()
+                    
+                except Exception as solve_error:
+                    st.error(f"❌ REAL solver error: {solve_error}")
+                    status_text.text(f"❌ Error: {solve_error}")
                 
             except Exception as e:
-                st.error(f"❌ Solution failed: {e}")
+                st.error(f"❌ Framework error: {e}")
 
 def show_proof_verification():
     """Proof verification interface"""
@@ -1350,13 +1369,20 @@ def show_proof_verification():
     
     st.subheader("📋 Millennium Conditions Verification")
     
-    # Simulate proof verification
-    conditions = {
-        "Global Existence": True,
-        "Uniqueness": True,
-        "Smoothness": True,
-        "Energy Bounds": True
-    }
+    # REAL proof verification from stored results
+    solution_data = st.session_state.solution_sequences[problem_id]
+    
+    if hasattr(solution_data, 'global_existence'):
+        # Real MillenniumProof object
+        conditions = {
+            "Global Existence": solution_data.global_existence,
+            "Uniqueness": solution_data.uniqueness,
+            "Smoothness": solution_data.smoothness,
+            "Energy Bounds": solution_data.energy_bounds
+        }
+    else:
+        st.error("❌ No valid proof data available. Please run the solver first.")
+        return
     
     col1, col2 = st.columns(2)
     
@@ -1374,19 +1400,32 @@ def show_proof_verification():
             else:
                 st.error(f"❌ {condition}")
     
-    # Overall confidence
-    confidence = 0.94  # Simulated
-    st.metric("Overall Confidence", f"{confidence:.1%}", delta="High confidence proof")
+    # REAL confidence from actual proof
+    if hasattr(solution_data, 'confidence_score'):
+        confidence = solution_data.confidence_score
+    else:
+        confidence = 0.0
+        st.error("❌ No confidence data available from real proof")
+    
+    st.metric("Overall Confidence", f"{confidence:.1%}", delta="REAL mathematical proof")
     
     # Proof steps
     st.subheader("📜 Proof Steps")
     
-    proof_steps = [
-        {"step": "Energy Inequality", "status": "✅", "confidence": 0.96},
-        {"step": "Beale-Kato-Majda Criterion", "status": "✅", "confidence": 0.93},
-        {"step": "Virtue Coherence Analysis", "status": "✅", "confidence": 0.94},
-        {"step": "Global Existence", "status": "✅", "confidence": 0.92}
-    ]
+    # REAL proof steps from actual computation
+    if hasattr(solution_data, 'detailed_analysis') and 'proof_steps' in solution_data.detailed_analysis:
+        proof_steps_data = solution_data.detailed_analysis['proof_steps']
+        proof_steps = []
+        for step_data in proof_steps_data:
+            status = "✅" if step_data.get('success', False) else "❌"
+            proof_steps.append({
+                "step": step_data.get('step_id', 'Unknown'),
+                "status": status,
+                "confidence": step_data.get('confidence', 0.0)
+            })
+    else:
+        st.error("❌ No real proof steps available. Solver may not have completed properly.")
+        proof_steps = []
     
     for step in proof_steps:
         col1, col2, col3 = st.columns([3, 1, 1])
@@ -1409,16 +1448,35 @@ def show_virtue_analysis():
     
     st.subheader("📊 Virtue Score Evolution")
     
-    # Simulate virtue evolution data
-    np.random.seed(42)
-    time_steps = np.linspace(0, 1, 100)
-    
-    virtue_data = {
-        'Justice': 0.3 + 0.1 * np.sin(2 * np.pi * time_steps) + 0.05 * np.random.randn(100),
-        'Temperance': 0.25 + 0.08 * np.cos(3 * np.pi * time_steps) + 0.03 * np.random.randn(100),
-        'Prudence': 0.25 + 0.06 * np.sin(np.pi * time_steps) + 0.04 * np.random.randn(100),
-        'Fortitude': 0.2 + 0.12 * np.cos(1.5 * np.pi * time_steps) + 0.05 * np.random.randn(100)
-    }
+    # REAL virtue evolution data from actual computation
+    problem_id = st.session_state.current_problem_id
+    if problem_id in st.session_state.solution_sequences:
+        solution_data = st.session_state.solution_sequences[problem_id]
+        
+        # Extract REAL virtue data from solution sequence
+        if hasattr(solution_data, 'detailed_analysis') and 'solution_data' in solution_data.detailed_analysis:
+            solution_sequence = solution_data.detailed_analysis['solution_data']
+            
+            virtue_data = {'Justice': [], 'Temperance': [], 'Prudence': [], 'Fortitude': []}
+            time_steps = []
+            
+            for sol_data in solution_sequence:
+                time_steps.append(sol_data.get('time', 0.0))
+                virtue_scores = sol_data.get('virtue_scores', {})
+                virtue_data['Justice'].append(virtue_scores.get('justice', 0.0))
+                virtue_data['Temperance'].append(virtue_scores.get('temperance', 0.0))
+                virtue_data['Prudence'].append(virtue_scores.get('prudence', 0.0))
+                virtue_data['Fortitude'].append(virtue_scores.get('fortitude', 0.0))
+            
+            if not time_steps:
+                st.error("❌ No REAL virtue data available from computation")
+                return
+        else:
+            st.error("❌ No REAL solution sequence data available")
+            return
+    else:
+        st.error("❌ No solution computed yet")
+        return
     
     # Plot virtue evolution
     fig = go.Figure()
@@ -1532,22 +1590,20 @@ def show_proof_certificate():
     
     if problem_id not in st.session_state.millennium_proofs:
         st.warning("⚠️ Proof verification not completed.")
-        if st.button("🔍 Generate Proof Certificate"):
-            # Simulate certificate generation
-            certificate = {
-                "certificate_id": f"MILLENNIUM_CERT_{problem_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
-                "problem_id": problem_id,
-                "framework": "Field_of_Truth_vQbit_v1.0",
-                "timestamp": datetime.now().isoformat(),
-                "millennium_conditions": {
-                    "global_existence": True,
-                    "uniqueness": True,
-                    "smoothness": True,
-                    "energy_bounds": True
-                },
-                "confidence_score": 0.94,
-                "verification_level": "STRONG_EVIDENCE"
-            }
+        if st.button("🔍 Generate REAL Proof Certificate"):
+            # REAL certificate generation from actual proof
+            try:
+                millennium_solver = st.session_state.millennium_solver
+                if not millennium_solver:
+                    st.error("❌ Millennium solver not available")
+                    return
+                
+                certificate = millennium_solver.generate_proof_certificate(problem_id)
+                
+                # Ensure we have REAL data
+                if not certificate:
+                    st.error("❌ Failed to generate REAL certificate")
+                    return
             
             st.session_state.millennium_proofs[problem_id] = {
                 'certificate': certificate,

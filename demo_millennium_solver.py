@@ -82,9 +82,9 @@ async def demonstrate_millennium_solution():
     print("   This demonstrates the core mathematical achievement...")
     
     try:
-        # Solve using virtue-guided approach
+        # Solve using virtue-guided approach - REAL MATHEMATICS ONLY
         millennium_proof = await millennium_solver.solve_millennium_problem(
-            problem_id=problem_id,
+            problem_id,  # Use the actual problem_id returned from create_canonical_problem
             proof_strategy=ProofStrategy.VIRTUE_GUIDED,
             target_confidence=0.95
         )

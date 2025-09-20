@@ -435,8 +435,11 @@ class MillenniumSolver:
         
         logger.info(f"Starting Millennium proof with strategy: {proof_strategy.value}")
         
-        # Extract system ID from problem ID
-        system_id = problem_id.replace("millennium_", "")
+        # Extract system ID from problem ID correctly
+        if problem_id.startswith("millennium_"):
+            system_id = problem_id
+        else:
+            system_id = f"millennium_{problem_id}"
         
         # Solve the Navier-Stokes system
         target_virtues = {
