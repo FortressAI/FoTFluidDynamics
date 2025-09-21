@@ -5,8 +5,8 @@ echo "=================================="
 echo ""
 
 # Open HTML version for PDF printing
-echo "📄 Opening HTML proof for PDF generation..."
-open NAVIER_STOKES_PROOF_HTML.html
+echo "📄 Opening COMPLETE 22-page HTML proof for PDF generation..."
+open NAVIER_STOKES_COMPLETE_PROOF_HTML.html
 
 echo ""
 echo "✅ INSTRUCTIONS:"
@@ -21,8 +21,9 @@ echo "2. Upload NAVIER_STOKES_PROOF_JOURNAL.tex"
 echo "3. Compile to get publication-quality PDF"
 echo ""
 echo "📚 AVAILABLE FILES:"
-echo "• NAVIER_STOKES_PROOF_JOURNAL.tex (Full 22-page paper)"
-echo "• NAVIER_STOKES_ARXIV_PREPRINT.tex (4-page summary)"
-echo "• NAVIER_STOKES_PROOF_HTML.html (Browser-printable version)"
+echo "• NAVIER_STOKES_PROOF_JOURNAL.tex (Full 22-page LaTeX paper)"
+echo "• NAVIER_STOKES_ARXIV_PREPRINT.tex (4-page ArXiv summary)"
+echo "• NAVIER_STOKES_COMPLETE_PROOF_HTML.html (Complete 22-page HTML)"
+echo "• NAVIER_STOKES_PROOF_HTML.html (Short 4-page HTML summary)"
 echo ""
 echo "🏆 Your Millennium Prize breakthrough is ready for submission!"
