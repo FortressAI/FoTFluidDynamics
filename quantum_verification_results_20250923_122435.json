@@ -1,0 +1,1586 @@
+{
+  "heff_0.1": {
+    "amplitude_0.5": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 0.1
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          5.7940532825980295e-05,
+          6.257242860623188e-05,
+          6.42702390779017e-05
+        ],
+        "min_uncertainty": 5.7940532825980295e-05,
+        "avg_uncertainty": 6.159440017003796e-05,
+        "theoretical_bound": 0.05,
+        "effective_bound": 0.0019276571095877652,
+        "bound_satisfied": "False",
+        "violation_factor": 0.030057489237995776,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": -7.2002944182147416e-09,
+        "omega_l2_norm": 1.9914193126850448,
+        "omega_linf_norm": 0.028870515307517722,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -2.0837666353040377e-05,
+        "total_quantum_bound": -2.0837666353040377e-05,
+        "regularization_strength": 20837666.35304038,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 0.1,
+        "quantum_regime": "False"
+      }
+    },
+    "amplitude_1.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 0.1
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          0.00023305375758057617,
+          0.00024873806952775023,
+          0.0002557670367394286
+        ],
+        "min_uncertainty": 0.00023305375758057617,
+        "avg_uncertainty": 0.00024585295461591834,
+        "theoretical_bound": 0.05,
+        "effective_bound": 0.0019276571095877652,
+        "bound_satisfied": "False",
+        "violation_factor": 0.12090000676023516,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": 2.5513394832550594e-08,
+        "omega_l2_norm": 3.977795666420196,
+        "omega_linf_norm": 0.060074512327981375,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -9.022367578611967e-05,
+        "total_quantum_bound": -9.022367578611967e-05,
+        "regularization_strength": 90223675.78611967,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 0.1,
+        "quantum_regime": "False"
+      }
+    },
+    "amplitude_2.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 0.1
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          0.0009302255470549583,
+          0.0009956174716215921,
+          0.0010347161832546092
+        ],
+        "min_uncertainty": 0.0009302255470549583,
+        "avg_uncertainty": 0.0009868530673103864,
+        "theoretical_bound": 0.05,
+        "effective_bound": 0.0019276571095877652,
+        "bound_satisfied": "False",
+        "violation_factor": 0.4825679538275817,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": -1.7245271398769477e-07,
+        "omega_l2_norm": 7.966516869063514,
+        "omega_linf_norm": 0.113728330208353,
+        "logarithmic_term": 8.164337047165896,
+        "quantum_negative_term": -0.0003233533272995045,
+        "total_quantum_bound": 8.164013693838596,
+        "regularization_strength": 3.9605582845425384e-05,
+        "bound_satisfied": "True",
+        "quantum_dominates": "False",
+        "critical_scale": 0.1,
+        "quantum_regime": "True"
+      }
+    },
+    "amplitude_5.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 0.1,
+            "theoretical": 0.1,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 0.1
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          0.0058111678017944025,
+          0.006190474874062028,
+          0.006451650689554556
+        ],
+        "min_uncertainty": 0.0058111678017944025,
+        "avg_uncertainty": 0.006151097788470328,
+        "theoretical_bound": 0.05,
+        "effective_bound": 0.0019276571095877652,
+        "bound_satisfied": "True",
+        "violation_factor": 3.0146273281129012,
+        "quantum_regime": "False",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": 8.692379506245613e-06,
+        "omega_l2_norm": 19.844218770669467,
+        "omega_linf_norm": 0.27061664692987897,
+        "logarithmic_term": 392.03396349345644,
+        "quantum_negative_term": -0.0018308342398892692,
+        "total_quantum_bound": 392.03213265921653,
+        "regularization_strength": 4.6700908859388355e-06,
+        "bound_satisfied": "True",
+        "quantum_dominates": "False",
+        "critical_scale": 0.1,
+        "quantum_regime": "True"
+      }
+    },
+    "trajectory_evolution": {
+      "time_trajectory": [
+        0.0,
+        0.1111111111111111,
+        0.2222222222222222,
+        0.3333333333333333,
+        0.4444444444444444,
+        0.5555555555555556,
+        0.6666666666666666,
+        0.7777777777777777,
+        0.8888888888888888,
+        1.0
+      ],
+      "max_vorticity_trajectory": [
+        0.1100478592768391,
+        0.13726591588859652,
+        0.1551646089023916,
+        0.16027622814094417,
+        0.1429441705336768,
+        0.09857437069970526,
+        0.0844418458154059,
+        0.10699171931368828,
+        0.12534744583433202,
+        0.12240919807186357
+      ],
+      "quantum_feedback_trajectory": [
+        -0.0003027632832853746,
+        -0.0004710482916183814,
+        -0.0006019013963958035,
+        -0.0006422117326771996,
+        -0.0005108258972390219,
+        -0.00024292266397107277,
+        -0.00017826063311781958,
+        -0.00028618070004247643,
+        -0.00039279955442977,
+        -0.00037460029431491825
+      ],
+      "results_by_time": [
+        {
+          "time": 0.0,
+          "max_vorticity": 0.1100478592768391,
+          "quantum_feedback": -0.0003027632832853746,
+          "bound_satisfied": "True",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 4.9785762967665146e-05
+        },
+        {
+          "time": 0.1111111111111111,
+          "max_vorticity": 0.13726591588859652,
+          "quantum_feedback": -0.0004710482916183814,
+          "bound_satisfied": "True",
+          "uncertainty_satisfied": "True",
+          "regularization_strength": 1.0775625716693832e-05
+        },
+        {
+          "time": 0.2222222222222222,
+          "max_vorticity": 0.1551646089023916,
+          "quantum_feedback": -0.0006019013963958035,
+          "bound_satisfied": "True",
+          "uncertainty_satisfied": "True",
+          "regularization_strength": 5.2502141060816526e-06
+        },
+        {
+          "time": 0.3333333333333333,
+          "max_vorticity": 0.16027622814094417,
+          "quantum_feedback": -0.0006422117326771996,
+          "bound_satisfied": "True",
+          "uncertainty_satisfied": "True",
+          "regularization_strength": 4.887116461128708e-06
+        },
+        {
+          "time": 0.4444444444444444,
+          "max_vorticity": 0.1429441705336768,
+          "quantum_feedback": -0.0005108258972390219,
+          "bound_satisfied": "True",
+          "uncertainty_satisfied": "True",
+          "regularization_strength": 8.246549694321847e-06
+        },
+        {
+          "time": 0.5555555555555556,
+          "max_vorticity": 0.09857437069970526,
+          "quantum_feedback": -0.00024292266397107277,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 242922663.9710728
+        },
+        {
+          "time": 0.6666666666666666,
+          "max_vorticity": 0.0844418458154059,
+          "quantum_feedback": -0.00017826063311781958,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 178260633.11781958
+        },
+        {
+          "time": 0.7777777777777777,
+          "max_vorticity": 0.10699171931368828,
+          "quantum_feedback": -0.00028618070004247643,
+          "bound_satisfied": "True",
+          "uncertainty_satisfied": "True",
+          "regularization_strength": 4.2743828043579336e-05
+        },
+        {
+          "time": 0.8888888888888888,
+          "max_vorticity": 0.12534744583433202,
+          "quantum_feedback": -0.00039279955442977,
+          "bound_satisfied": "True",
+          "uncertainty_satisfied": "True",
+          "regularization_strength": 1.1461594793528421e-05
+        },
+        {
+          "time": 1.0,
+          "max_vorticity": 0.12240919807186357,
+          "quantum_feedback": -0.00037460029431491825,
+          "bound_satisfied": "True",
+          "uncertainty_satisfied": "True",
+          "regularization_strength": 1.3861735452441377e-05
+        }
+      ],
+      "all_bounds_satisfied": false,
+      "all_uncertainty_satisfied": false,
+      "strong_quantum_feedback": true,
+      "regularity_maintained": false,
+      "critical_scale": 0.1,
+      "blow_up_prevented": false
+    }
+  },
+  "heff_0.5": {
+    "amplitude_0.5": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 0.5
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          1.1606545891665462e-05,
+          1.2530635323049959e-05,
+          1.293720804064808e-05
+        ],
+        "min_uncertainty": 1.1606545891665462e-05,
+        "avg_uncertainty": 1.2358129751787833e-05,
+        "theoretical_bound": 0.25,
+        "effective_bound": 0.009638285547938826,
+        "bound_satisfied": "False",
+        "violation_factor": 0.0012042127029684812,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": 2.677349619246982e-09,
+        "omega_l2_norm": 1.990877824352413,
+        "omega_linf_norm": 0.028438793471485747,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.00010109562176422754,
+        "total_quantum_bound": -0.00010109562176422754,
+        "regularization_strength": 101095621.76422754,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 0.5,
+        "quantum_regime": "False"
+      }
+    },
+    "amplitude_1.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 0.5
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          4.659236951167436e-05,
+          4.9120072643290564e-05,
+          5.0894132436807774e-05
+        ],
+        "min_uncertainty": 4.659236951167436e-05,
+        "avg_uncertainty": 4.886885819725757e-05,
+        "theoretical_bound": 0.25,
+        "effective_bound": 0.009638285547938826,
+        "bound_satisfied": "False",
+        "violation_factor": 0.004834093084286994,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": 2.7872129581385198e-08,
+        "omega_l2_norm": 3.9606049343039316,
+        "omega_linf_norm": 0.06443041692048987,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.0005189098280685184,
+        "total_quantum_bound": -0.0005189098280685184,
+        "regularization_strength": 518909828.0685184,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 0.5,
+        "quantum_regime": "False"
+      }
+    },
+    "amplitude_2.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 0.5
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          0.00018652140915799545,
+          0.00020151605688277228,
+          0.0002031586675090194
+        ],
+        "min_uncertainty": 0.00018652140915799545,
+        "avg_uncertainty": 0.00019706537784992904,
+        "theoretical_bound": 0.25,
+        "effective_bound": 0.009638285547938826,
+        "bound_satisfied": "False",
+        "violation_factor": 0.019352135629337477,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": -1.489927268699811e-07,
+        "omega_l2_norm": 7.9564646241854655,
+        "omega_linf_norm": 0.12185804211979438,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.0018561728036586976,
+        "total_quantum_bound": -0.0018561728036586976,
+        "regularization_strength": 1856172803.6586976,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 0.5,
+        "quantum_regime": "False"
+      }
+    },
+    "amplitude_5.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 0.5,
+            "theoretical": 0.5,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 0.5
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          0.0011743906063012874,
+          0.001229155782752596,
+          0.0012915653798450664
+        ],
+        "min_uncertainty": 0.0011743906063012874,
+        "avg_uncertainty": 0.0012317039229663167,
+        "theoretical_bound": 0.25,
+        "effective_bound": 0.009638285547938826,
+        "bound_satisfied": "False",
+        "violation_factor": 0.12184642179982248,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": 6.991485608369696e-06,
+        "omega_l2_norm": 19.893174317423743,
+        "omega_linf_norm": 0.3316329120686826,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.013747548545894323,
+        "total_quantum_bound": -0.013747548545894323,
+        "regularization_strength": 13747548545.894323,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 0.5,
+        "quantum_regime": "False"
+      }
+    },
+    "trajectory_evolution": {
+      "time_trajectory": [
+        0.0,
+        0.1111111111111111,
+        0.2222222222222222,
+        0.3333333333333333,
+        0.4444444444444444,
+        0.5555555555555556,
+        0.6666666666666666,
+        0.7777777777777777,
+        0.8888888888888888,
+        1.0
+      ],
+      "max_vorticity_trajectory": [
+        0.11308234713530409,
+        0.15134737756015423,
+        0.16750282042427522,
+        0.17618409720289552,
+        0.14847122350979913,
+        0.10092376351742192,
+        0.08186664878050286,
+        0.1097411883617497,
+        0.12023751713930579,
+        0.10987696867222094
+      ],
+      "quantum_feedback_trajectory": [
+        -0.0015984521542036772,
+        -0.002863253586791985,
+        -0.0035071493562608743,
+        -0.003880104513399917,
+        -0.0027554630263120915,
+        -0.001273200755315063,
+        -0.0008377685228187762,
+        -0.0015053910528811285,
+        -0.0018071325659781068,
+        -0.0015091185305745277
+      ],
+      "results_by_time": [
+        {
+          "time": 0.0,
+          "max_vorticity": 0.11308234713530409,
+          "quantum_feedback": -0.0015984521542036772,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 1598452154.2036772
+        },
+        {
+          "time": 0.1111111111111111,
+          "max_vorticity": 0.15134737756015423,
+          "quantum_feedback": -0.002863253586791985,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 2863253586.791985
+        },
+        {
+          "time": 0.2222222222222222,
+          "max_vorticity": 0.16750282042427522,
+          "quantum_feedback": -0.0035071493562608743,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 3507149356.2608743
+        },
+        {
+          "time": 0.3333333333333333,
+          "max_vorticity": 0.17618409720289552,
+          "quantum_feedback": -0.003880104513399917,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 3880104513.399917
+        },
+        {
+          "time": 0.4444444444444444,
+          "max_vorticity": 0.14847122350979913,
+          "quantum_feedback": -0.0027554630263120915,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 2755463026.3120914
+        },
+        {
+          "time": 0.5555555555555556,
+          "max_vorticity": 0.10092376351742192,
+          "quantum_feedback": -0.001273200755315063,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 1273200755.315063
+        },
+        {
+          "time": 0.6666666666666666,
+          "max_vorticity": 0.08186664878050286,
+          "quantum_feedback": -0.0008377685228187762,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 837768522.8187762
+        },
+        {
+          "time": 0.7777777777777777,
+          "max_vorticity": 0.1097411883617497,
+          "quantum_feedback": -0.0015053910528811285,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 1505391052.8811285
+        },
+        {
+          "time": 0.8888888888888888,
+          "max_vorticity": 0.12023751713930579,
+          "quantum_feedback": -0.0018071325659781068,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 1807132565.9781067
+        },
+        {
+          "time": 1.0,
+          "max_vorticity": 0.10987696867222094,
+          "quantum_feedback": -0.0015091185305745277,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 1509118530.5745277
+        }
+      ],
+      "all_bounds_satisfied": false,
+      "all_uncertainty_satisfied": false,
+      "strong_quantum_feedback": true,
+      "regularity_maintained": false,
+      "critical_scale": 0.5,
+      "blow_up_prevented": false
+    }
+  },
+  "heff_1.0": {
+    "amplitude_0.5": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 1.0
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          5.841292142401307e-06,
+          6.151132869292033e-06,
+          6.413679412424672e-06
+        ],
+        "min_uncertainty": 5.841292142401307e-06,
+        "avg_uncertainty": 6.135368141372671e-06,
+        "theoretical_bound": 0.5,
+        "effective_bound": 0.019276571095877652,
+        "bound_satisfied": "False",
+        "violation_factor": 0.00030302547654081924,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": -3.1467308309290087e-09,
+        "omega_l2_norm": 1.9837070422006924,
+        "omega_linf_norm": 0.02847569652808704,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.00020271632318992708,
+        "total_quantum_bound": -0.00020271632318992708,
+        "regularization_strength": 202716323.18992707,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 1.0,
+        "quantum_regime": "False"
+      }
+    },
+    "amplitude_1.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 1.0
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          2.3441282120529135e-05,
+          2.4933840108071634e-05,
+          2.565855312806915e-05
+        ],
+        "min_uncertainty": 2.3441282120529135e-05,
+        "avg_uncertainty": 2.467789178555664e-05,
+        "theoretical_bound": 0.5,
+        "effective_bound": 0.019276571095877652,
+        "bound_satisfied": "False",
+        "violation_factor": 0.0012160504066795427,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": -7.142645953986406e-08,
+        "omega_l2_norm": 3.9828177965916596,
+        "omega_linf_norm": 0.059718618039183435,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.0008915783351274713,
+        "total_quantum_bound": -0.0008915783351274713,
+        "regularization_strength": 891578335.1274713,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 1.0,
+        "quantum_regime": "False"
+      }
+    },
+    "amplitude_2.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 1.0
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          9.395524883353282e-05,
+          9.8993518038691e-05,
+          0.00010342180874668839
+        ],
+        "min_uncertainty": 9.395524883353282e-05,
+        "avg_uncertainty": 9.879019187297073e-05,
+        "theoretical_bound": 0.5,
+        "effective_bound": 0.019276571095877652,
+        "bound_satisfied": "False",
+        "violation_factor": 0.004874064394866647,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": -4.739459946277906e-07,
+        "omega_l2_norm": 7.982494747490314,
+        "omega_linf_norm": 0.11688403771283198,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.0034154695680136825,
+        "total_quantum_bound": -0.0034154695680136825,
+        "regularization_strength": 3415469568.0136824,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 1.0,
+        "quantum_regime": "False"
+      }
+    },
+    "amplitude_5.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 1.0,
+            "theoretical": 1.0,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 1.0
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          0.000587016301344969,
+          0.000613137653705734,
+          0.0006316922556250818
+        ],
+        "min_uncertainty": 0.000587016301344969,
+        "avg_uncertainty": 0.000610615403558595,
+        "theoretical_bound": 0.5,
+        "effective_bound": 0.019276571095877652,
+        "bound_satisfied": "False",
+        "violation_factor": 0.030452319472445186,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": -4.084451845508443e-06,
+        "omega_l2_norm": 19.782852223032467,
+        "omega_linf_norm": 0.2738982744483498,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.018755066186445887,
+        "total_quantum_bound": -0.018755066186445887,
+        "regularization_strength": 18755066186.44589,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 1.0,
+        "quantum_regime": "False"
+      }
+    },
+    "trajectory_evolution": {
+      "time_trajectory": [
+        0.0,
+        0.1111111111111111,
+        0.2222222222222222,
+        0.3333333333333333,
+        0.4444444444444444,
+        0.5555555555555556,
+        0.6666666666666666,
+        0.7777777777777777,
+        0.8888888888888888,
+        1.0
+      ],
+      "max_vorticity_trajectory": [
+        0.10779404676005294,
+        0.14315782338028993,
+        0.1712528101122489,
+        0.16075145122753837,
+        0.145482026591326,
+        0.10242585687396907,
+        0.08980910885129537,
+        0.10950510407514588,
+        0.12621734471144277,
+        0.11062349259327944
+      ],
+      "quantum_feedback_trajectory": [
+        -0.0029048891292271202,
+        -0.0051235405987455716,
+        -0.007331881242835496,
+        -0.006460257267939911,
+        -0.005291255015279822,
+        -0.0026227640390916996,
+        -0.002016419008165955,
+        -0.0029978419546271328,
+        -0.003982704526501793,
+        -0.003059389278383838
+      ],
+      "results_by_time": [
+        {
+          "time": 0.0,
+          "max_vorticity": 0.10779404676005294,
+          "quantum_feedback": -0.0029048891292271202,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 2904889129.2271204
+        },
+        {
+          "time": 0.1111111111111111,
+          "max_vorticity": 0.14315782338028993,
+          "quantum_feedback": -0.0051235405987455716,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 5123540598.745572
+        },
+        {
+          "time": 0.2222222222222222,
+          "max_vorticity": 0.1712528101122489,
+          "quantum_feedback": -0.007331881242835496,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 7331881242.835496
+        },
+        {
+          "time": 0.3333333333333333,
+          "max_vorticity": 0.16075145122753837,
+          "quantum_feedback": -0.006460257267939911,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 6460257267.939911
+        },
+        {
+          "time": 0.4444444444444444,
+          "max_vorticity": 0.145482026591326,
+          "quantum_feedback": -0.005291255015279822,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 5291255015.279821
+        },
+        {
+          "time": 0.5555555555555556,
+          "max_vorticity": 0.10242585687396907,
+          "quantum_feedback": -0.0026227640390916996,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 2622764039.0916996
+        },
+        {
+          "time": 0.6666666666666666,
+          "max_vorticity": 0.08980910885129537,
+          "quantum_feedback": -0.002016419008165955,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 2016419008.165955
+        },
+        {
+          "time": 0.7777777777777777,
+          "max_vorticity": 0.10950510407514588,
+          "quantum_feedback": -0.0029978419546271328,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 2997841954.627133
+        },
+        {
+          "time": 0.8888888888888888,
+          "max_vorticity": 0.12621734471144277,
+          "quantum_feedback": -0.003982704526501793,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 3982704526.501793
+        },
+        {
+          "time": 1.0,
+          "max_vorticity": 0.11062349259327944,
+          "quantum_feedback": -0.003059389278383838,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 3059389278.383838
+        }
+      ],
+      "all_bounds_satisfied": false,
+      "all_uncertainty_satisfied": false,
+      "strong_quantum_feedback": true,
+      "regularity_maintained": false,
+      "critical_scale": 1.0,
+      "blow_up_prevented": false
+    }
+  },
+  "heff_2.0": {
+    "amplitude_0.5": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 2.0
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          2.9421922316563093e-06,
+          3.1141389484806757e-06,
+          3.1986221980500766e-06
+        ],
+        "min_uncertainty": 2.9421922316563093e-06,
+        "avg_uncertainty": 3.0849844593956874e-06,
+        "theoretical_bound": 1.0,
+        "effective_bound": 0.038553142191755305,
+        "bound_satisfied": "False",
+        "violation_factor": 7.631523825016538e-05,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": -5.885271080990298e-09,
+        "omega_l2_norm": 1.988442931150978,
+        "omega_linf_norm": 0.029986460457142514,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.0004495939053738858,
+        "total_quantum_bound": -0.0004495939053738858,
+        "regularization_strength": 449593905.3738858,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 2.0,
+        "quantum_regime": "False"
+      }
+    },
+    "amplitude_1.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 2.0
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          1.1594749881789603e-05,
+          1.232898012021243e-05,
+          1.2858502281979953e-05
+        ],
+        "min_uncertainty": 1.1594749881789603e-05,
+        "avg_uncertainty": 1.226074409466066e-05,
+        "theoretical_bound": 1.0,
+        "effective_bound": 0.038553142191755305,
+        "bound_satisfied": "False",
+        "violation_factor": 0.0003007472082073033,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": -1.4435824671422309e-08,
+        "omega_l2_norm": 3.9725716419244304,
+        "omega_linf_norm": 0.0513432852990246,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.0013180664726485177,
+        "total_quantum_bound": -0.0013180664726485177,
+        "regularization_strength": 1318066472.6485176,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 2.0,
+        "quantum_regime": "False"
+      }
+    },
+    "amplitude_2.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 2.0
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          4.69739715618238e-05,
+          4.956408157639238e-05,
+          5.068027364358759e-05
+        ],
+        "min_uncertainty": 4.69739715618238e-05,
+        "avg_uncertainty": 4.907277559393459e-05,
+        "theoretical_bound": 1.0,
+        "effective_bound": 0.038553142191755305,
+        "bound_satisfied": "False",
+        "violation_factor": 0.0012184213501505285,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": 1.8995911810972742e-07,
+        "omega_l2_norm": 7.929857805883876,
+        "omega_linf_norm": 0.11458745347450108,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.006565142246885475,
+        "total_quantum_bound": -0.006565142246885475,
+        "regularization_strength": 6565142246.885475,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 2.0,
+        "quantum_regime": "False"
+      }
+    },
+    "amplitude_5.0": {
+      "commutation": {
+        "commutator_results": [
+          {
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              17,
+              16,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          },
+          {
+            "point": [
+              16,
+              17,
+              16
+            ],
+            "computed": 2.0,
+            "theoretical": 2.0,
+            "relative_error": 0.0
+          }
+        ],
+        "average_relative_error": 0.0,
+        "commutation_verified": "True",
+        "heff_effective": 2.0
+      },
+      "uncertainty": {
+        "uncertainty_products": [
+          0.0002948809272289722,
+          0.00030415897668866436,
+          0.00032302587028620904
+        ],
+        "min_uncertainty": 0.0002948809272289722,
+        "avg_uncertainty": 0.0003073552580679485,
+        "theoretical_bound": 1.0,
+        "effective_bound": 0.038553142191755305,
+        "bound_satisfied": "False",
+        "violation_factor": 0.0076486872525797205,
+        "quantum_regime": "True",
+        "discretization_factor": 0.038553142191755305
+      },
+      "stretching": {
+        "classical_stretching": 3.5723080818832585e-06,
+        "omega_l2_norm": 19.89096263269663,
+        "omega_linf_norm": 0.28936454137560735,
+        "logarithmic_term": 0.0,
+        "quantum_negative_term": -0.04186591890275779,
+        "total_quantum_bound": -0.04186591890275779,
+        "regularization_strength": 41865918902.75779,
+        "bound_satisfied": "False",
+        "quantum_dominates": "True",
+        "critical_scale": 2.0,
+        "quantum_regime": "False"
+      }
+    },
+    "trajectory_evolution": {
+      "time_trajectory": [
+        0.0,
+        0.1111111111111111,
+        0.2222222222222222,
+        0.3333333333333333,
+        0.4444444444444444,
+        0.5555555555555556,
+        0.6666666666666666,
+        0.7777777777777777,
+        0.8888888888888888,
+        1.0
+      ],
+      "max_vorticity_trajectory": [
+        0.10668463427450853,
+        0.14966111980085953,
+        0.17444101349879854,
+        0.16695680975765365,
+        0.1395472978764028,
+        0.09774292909180478,
+        0.0890355341838031,
+        0.10881206927956713,
+        0.1253131966158503,
+        0.11207318354012148
+      ],
+      "quantum_feedback_trajectory": [
+        -0.00569080559514282,
+        -0.011199225390023614,
+        -0.015214833595244007,
+        -0.013937288162226676,
+        -0.009736724172302747,
+        -0.004776840093722788,
+        -0.003963663173697585,
+        -0.0059200332104506585,
+        -0.007851698623041378,
+        -0.006280199234408878
+      ],
+      "results_by_time": [
+        {
+          "time": 0.0,
+          "max_vorticity": 0.10668463427450853,
+          "quantum_feedback": -0.00569080559514282,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 5690805595.142819
+        },
+        {
+          "time": 0.1111111111111111,
+          "max_vorticity": 0.14966111980085953,
+          "quantum_feedback": -0.011199225390023614,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 11199225390.023615
+        },
+        {
+          "time": 0.2222222222222222,
+          "max_vorticity": 0.17444101349879854,
+          "quantum_feedback": -0.015214833595244007,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 15214833595.244007
+        },
+        {
+          "time": 0.3333333333333333,
+          "max_vorticity": 0.16695680975765365,
+          "quantum_feedback": -0.013937288162226676,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 13937288162.226675
+        },
+        {
+          "time": 0.4444444444444444,
+          "max_vorticity": 0.1395472978764028,
+          "quantum_feedback": -0.009736724172302747,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 9736724172.302748
+        },
+        {
+          "time": 0.5555555555555556,
+          "max_vorticity": 0.09774292909180478,
+          "quantum_feedback": -0.004776840093722788,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 4776840093.722789
+        },
+        {
+          "time": 0.6666666666666666,
+          "max_vorticity": 0.0890355341838031,
+          "quantum_feedback": -0.003963663173697585,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 3963663173.697585
+        },
+        {
+          "time": 0.7777777777777777,
+          "max_vorticity": 0.10881206927956713,
+          "quantum_feedback": -0.0059200332104506585,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 5920033210.450659
+        },
+        {
+          "time": 0.8888888888888888,
+          "max_vorticity": 0.1253131966158503,
+          "quantum_feedback": -0.007851698623041378,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 7851698623.041378
+        },
+        {
+          "time": 1.0,
+          "max_vorticity": 0.11207318354012148,
+          "quantum_feedback": -0.006280199234408878,
+          "bound_satisfied": "False",
+          "uncertainty_satisfied": "False",
+          "regularization_strength": 6280199234.408878
+        }
+      ],
+      "all_bounds_satisfied": false,
+      "all_uncertainty_satisfied": false,
+      "strong_quantum_feedback": true,
+      "regularity_maintained": false,
+      "critical_scale": 2.0,
+      "blow_up_prevented": false
+    }
+  }
+}
