@@ -71,7 +71,7 @@ class ShorQuantumSubstrate:
         
         logger.info(f"Initialized Shor quantum substrate for N={self.N}")
         logger.info(f"Hilbert space dimension: {self.hilbert_dimension}")
-        logger.info(f"Quantum coherence time: {self.coherence_time:.3f}")
+        logger.info(f"Quantum coherence time: {self.quantum_register.coherence_time:.3f}")
     
     def _initialize_noiseless_quantum_substrate(self):
         """Initialize the noiseless quantum substrate using standard quantum mechanics"""
